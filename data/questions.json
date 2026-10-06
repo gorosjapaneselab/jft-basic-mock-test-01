@@ -1,0 +1,1552 @@
+[
+  {
+    "id": "Q01",
+    "section": 1,
+    "category": "語の意味",
+    "difficulty": "Easy",
+    "instruction": "",
+    "question": "スマホの電池がなくなったので、電気屋で（　　）を買いました。",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "掃除機（そうじき）"
+      },
+      {
+        "id": "c2",
+        "text": "充電器（じゅうでんき）"
+      },
+      {
+        "id": "c3",
+        "text": "炊飯器（すいはんき）"
+      },
+      {
+        "id": "c4",
+        "text": "洗濯機（せんたくき）"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "「スマホの電池がなくなった」という場面で、バッテリーを充電するために購入する器具として「充電器」が唯一適切です。他の選択肢はいずれも電化製品（掃除機・炊飯器・洗濯機）ですが、文脈に合いません。",
+    "source": "IRODORI Starter Lesson 10 / Elementary 2 Lesson 12"
+  },
+  {
+    "id": "Q02",
+    "section": 1,
+    "category": "語の意味",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "「すみません、きょうは体の調子がわるいので、（　　）してもいいですか。」",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "早退（そうたい）"
+      },
+      {
+        "id": "c2",
+        "text": "残業（ざんぎょう）"
+      },
+      {
+        "id": "c3",
+        "text": "遅刻（ちこく）"
+      },
+      {
+        "id": "c4",
+        "text": "出張（しゅっちょう）"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "体調不良を理由に、勤務終了時刻より前に仕事を切り上げて帰宅・通院する許可を求める表現です。この行動を表す語彙は「早退」です。",
+    "source": "IRODORI Elementary 1 Lesson 14"
+  },
+  {
+    "id": "Q03",
+    "section": 1,
+    "category": "語の意味",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "このパンは（　　）が切れています。",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "定休日（ていきゅうび）"
+      },
+      {
+        "id": "c2",
+        "text": "営業時間（えいぎょうじかん）"
+      },
+      {
+        "id": "c3",
+        "text": "賞味期限（しょうみきげん）"
+      },
+      {
+        "id": "c4",
+        "text": "配送日（はいそうび）"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "食品の品質やおいしさが保たれる期限を表す言葉は「賞味期限」であり、「賞味期限が切れる」というコロケーションで使われます。",
+    "source": "IRODORI Elementary 1 Lesson 11 / Elementary 2 Lesson 16"
+  },
+  {
+    "id": "Q04",
+    "section": 1,
+    "category": "語の用法",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "Which of the following is the most appropriate sentence using “分ける”?",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "会議の資料を準備して、参加者全員に1枚ずつ分けました。"
+      },
+      {
+        "id": "c2",
+        "text": "明日の予定について相談したいので、少し時間を分けてください。"
+      },
+      {
+        "id": "c3",
+        "text": "電車が混んでいたので、隣の人に席を半分分けてもらいました。"
+      },
+      {
+        "id": "c4",
+        "text": "ごみは燃えるごみと燃えないごみに分けて捨ててください。"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "「分ける」は、複数のものをグループや種類ごとに分別・分類する意味で使われます。Dの「ごみを分別する」が正しい用法です。",
+    "source": "IRODORI Elementary 2 Lesson 15"
+  },
+  {
+    "id": "Q05",
+    "section": 1,
+    "category": "語の用法",
+    "difficulty": "Hard",
+    "instruction": "",
+    "question": "Which of the following is the most appropriate sentence using “ご遠慮ください”?",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "電車内での携帯電話での通話は、他のお客様のご迷惑になりますのでご遠慮ください。"
+      },
+      {
+        "id": "c2",
+        "text": "荷物が重そうですね。私が持ちますから、どうぞご遠慮ください。"
+      },
+      {
+        "id": "c3",
+        "text": "こちらの席は自由に座ることができますので、どうぞご遠慮ください。"
+      },
+      {
+        "id": "c4",
+        "text": "本日のセミナーの資料は、受付で1人1枚ずつご遠慮ください。"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "「ご遠慮ください」は公共の場などで「〜するのを控えめにする・行わない」よう丁寧に求める（禁止・自粛の依頼）表現です。",
+    "source": "IRODORI Elementary 2 Lesson 8 / Lesson 13"
+  },
+  {
+    "id": "Q06",
+    "section": 1,
+    "category": "語の用法",
+    "difficulty": "Hard",
+    "instruction": "",
+    "question": "Which of the following is the most appropriate sentence using “とりあえず”?",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "来月のスケジュールについて、課長ととりあえず意見が一致しました。"
+      },
+      {
+        "id": "c2",
+        "text": "毎日欠かさず練習を続けて、とりあえず目標の大会で優勝できました。"
+      },
+      {
+        "id": "c3",
+        "text": "パソコンの画面が固まって動かないので、とりあえず再起動してみます。"
+      },
+      {
+        "id": "c4",
+        "text": "このバスは途中の停留所には止まらず、とりあえず終点の駅まで走ります。"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "「とりあえず」は「他の処置に先立ち、第一段階の応急的な行動として行う」意を表します。Cの「トラブルに対してまず再起動を試す」が正しい用法です。",
+    "source": "IRODORI Elementary 1 Lesson 15"
+  },
+  {
+    "id": "Q07",
+    "section": 1,
+    "category": "漢字の読み",
+    "difficulty": "Easy",
+    "instruction": "",
+    "question": "受付で名前を書いてください。",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "あんないじょ"
+      },
+      {
+        "id": "c2",
+        "text": "うけつけ"
+      },
+      {
+        "id": "c3",
+        "text": "うけわたし"
+      },
+      {
+        "id": "c4",
+        "text": "うけとり"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "漢字「受付」の正しい読み方は「うけつけ」です。",
+    "source": "IRODORI Starter Lesson 8 / Elementary 1 Lesson 7"
+  },
+  {
+    "id": "Q08",
+    "section": 1,
+    "category": "漢字の読み",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "ICカードをタッチして、改札を通ってください。",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "かいけい"
+      },
+      {
+        "id": "c2",
+        "text": "かんり"
+      },
+      {
+        "id": "c3",
+        "text": "こうさてん"
+      },
+      {
+        "id": "c4",
+        "text": "かいさつ"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "漢字「改札」の正しい読み方は「かいさつ」です。",
+    "source": "IRODORI Starter Lesson 13 / Elementary 2 Lesson 6"
+  },
+  {
+    "id": "Q09",
+    "section": 1,
+    "category": "漢字の読み",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "作業を始める前に、道具を準備してください。",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "どうぐ"
+      },
+      {
+        "id": "c2",
+        "text": "ぐあい"
+      },
+      {
+        "id": "c3",
+        "text": "ぶひん"
+      },
+      {
+        "id": "c4",
+        "text": "えのぐ"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "漢字「道具」の正しい読み方は「どうぐ」です。",
+    "source": "IRODORI Elementary 1 Lesson 10"
+  },
+  {
+    "id": "Q10",
+    "section": 1,
+    "category": "漢字の意味と用法",
+    "difficulty": "Easy",
+    "instruction": "",
+    "question": "A sign at the entrance of a shop says “営業中”. What does it mean?",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "今、店が休みで、中に入れません。"
+      },
+      {
+        "id": "c2",
+        "text": "今、店が開いていて、買い物ができます。"
+      },
+      {
+        "id": "c3",
+        "text": "今、店を掃除していて、準備中です。"
+      },
+      {
+        "id": "c4",
+        "text": "今、店が引っ越しをしています。"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "街の看板「営業中（えいぎょうちゅう）」は、現在店が開いており営業を行っている状態を意味します。",
+    "source": "IRODORI Starter Lesson 14"
+  },
+  {
+    "id": "Q11",
+    "section": 1,
+    "category": "漢字の意味と用法",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "A sign on the road says “通行止”. What does it mean?",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "ここでしばらく待たなければなりません。"
+      },
+      {
+        "id": "c2",
+        "text": "ここは車を停める場所です。"
+      },
+      {
+        "id": "c3",
+        "text": "ここを通ることはできません。"
+      },
+      {
+        "id": "c4",
+        "text": "ここからはスピードを出して走ります。"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "標識・看板の「通行止（つうこうどめ）」は、工事や危険等によりその場所を通行できない状態を意味します。",
+    "source": "IRODORI Starter Lesson 14"
+  },
+  {
+    "id": "Q12",
+    "section": 1,
+    "category": "漢字の意味と用法",
+    "difficulty": "Hard",
+    "instruction": "",
+    "question": "A sign at the entrance of a building says “関係者以外 立入禁止”. What does it mean?",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "荷物を持っている人は、入ってもいいです。"
+      },
+      {
+        "id": "c2",
+        "text": "誰でも自由にお店に入ることができます。"
+      },
+      {
+        "id": "c3",
+        "text": "ここからは、車で入らなければなりません。"
+      },
+      {
+        "id": "c4",
+        "text": "ここで働く人などの関係者以外は、中に入ってはいけません。"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "掲示「関係者以外 立入禁止（かんけいしゃいがい たちいりきんし）」は、その施設に特別な用件や許可のない部外者の立ち入りを禁じる看板です。",
+    "source": "IRODORI Elementary 2 Lesson 13"
+  },
+  {
+    "id": "Q13",
+    "section": 2,
+    "category": "文法",
+    "difficulty": "Easy",
+    "instruction": "",
+    "question": "A「明日、一緒に映画を見に行きませんか。」\nB「いいですね。どこ（　　）会いましょうか。」\nA「駅の改札の前はどうですか。」",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "で"
+      },
+      {
+        "id": "c2",
+        "text": "に"
+      },
+      {
+        "id": "c3",
+        "text": "へ"
+      },
+      {
+        "id": "c4",
+        "text": "を"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "「会う」という動作・行為を行う場所（会う場所）を示す助詞は「で」です。「に」は存在の場所や到着点、「へ」は方向、「を」は目的語を表すため、この文脈では不適切です。",
+    "source": "IRODORI Starter Lesson 12 / Elementary 1 Lesson 7"
+  },
+  {
+    "id": "Q14",
+    "section": 2,
+    "category": "文法",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "A「すみません、今日は少し熱がある（　　）、お休みを取ってもいいでしょうか。」\nB「わかりました。無理をしないでゆっくり休んでください。」",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "からも"
+      },
+      {
+        "id": "c2",
+        "text": "ので"
+      },
+      {
+        "id": "c3",
+        "text": "なのに"
+      },
+      {
+        "id": "c4",
+        "text": "ほど"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "相手に許可を求めたりお願いをしたりする際に、理由や状況を丁寧に接続して説明する表現は「ので」です。",
+    "source": "IRODORI Elementary 1 Lesson 14 / Elementary 2 Lesson 3"
+  },
+  {
+    "id": "Q15",
+    "section": 2,
+    "category": "文法",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "A「日本でお風呂に入るとき、どう（　　）いいですか。」\nB「お湯に入る前に、体をきれいに洗ってくださいね。」",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "したらば"
+      },
+      {
+        "id": "c2",
+        "text": "して"
+      },
+      {
+        "id": "c3",
+        "text": "したら"
+      },
+      {
+        "id": "c4",
+        "text": "する"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "相手にやり方やアドバイスを求める文型は「V-たらいいですか」です。動詞「する」のタ形「した」に「ら」がついた「したら」が正解です。",
+    "source": "IRODORI Elementary 2 Lesson 5"
+  },
+  {
+    "id": "Q16",
+    "section": 2,
+    "category": "文法",
+    "difficulty": "Easy",
+    "instruction": "",
+    "question": "A「すみません、こちらの資料を少し（　　）もいいですか。」\nB「ええ、どうぞ見てください。」",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "見る"
+      },
+      {
+        "id": "c2",
+        "text": "見ては"
+      },
+      {
+        "id": "c3",
+        "text": "見た"
+      },
+      {
+        "id": "c4",
+        "text": "見て"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "相手に許可を求める表現は「V-てもいいですか」です。動詞「見る」のテ形である「見て」が正解です。",
+    "source": "IRODORI Starter Lesson 10 / Elementary 1 Lesson 14"
+  },
+  {
+    "id": "Q17",
+    "section": 2,
+    "category": "文法",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "A「日本語の書類の書き方がわからなくて困っていたら、職場の先輩が丁寧に（　　）。」\nB「親切な先輩でよかったですね。」",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "教えてくれました"
+      },
+      {
+        "id": "c2",
+        "text": "教えてあげました"
+      },
+      {
+        "id": "c3",
+        "text": "教えてもらいました"
+      },
+      {
+        "id": "c4",
+        "text": "教えに行きました"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "主語である他の人（先輩）が、話し手（自分）のために好意で何かを行ってくれたことを表す表現は「V-てくれました」です。",
+    "source": "IRODORI Elementary 1 Lesson 18"
+  },
+  {
+    "id": "Q18",
+    "section": 2,
+    "category": "文法",
+    "difficulty": "Easy",
+    "instruction": "",
+    "question": "A「日本の新幹線に（　　）ことがありますか。」\nB「はい、京都へ旅行に行ったときに一度あります。」",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "乗る"
+      },
+      {
+        "id": "c2",
+        "text": "乗った"
+      },
+      {
+        "id": "c3",
+        "text": "乗り"
+      },
+      {
+        "id": "c4",
+        "text": "乗って"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "過去の経験を表す表現は「V-たことがあります」です。動詞「乗る」のタ形である「乗った」が入ります。",
+    "source": "IRODORI Elementary 1 Lesson 8"
+  },
+  {
+    "id": "Q19",
+    "section": 2,
+    "category": "文法",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "A「明日、市役所へ手続きに行きます。」\nB「そうですか。身分証明書を（　　）いけませんから、忘れないでくださいね。」",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "持って行かなくても"
+      },
+      {
+        "id": "c2",
+        "text": "持って行ったら"
+      },
+      {
+        "id": "c3",
+        "text": "持って行かなければ"
+      },
+      {
+        "id": "c4",
+        "text": "持って行けば"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "必要や義務を表す表現は「V-なければいけません／なりません」です。「持って行かなければ」が正解です。",
+    "source": "IRODORI Elementary 1 Lesson 14"
+  },
+  {
+    "id": "Q20",
+    "section": 2,
+    "category": "表現",
+    "difficulty": "Medium",
+    "instruction": "At work, you are asking a coworker to check a document for you.",
+    "question": "A「すみません、この日本語のメールの文章をちょっと（　　）。」\nB「いいですよ。どれですか、見せてください。」",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "チェックしましょうか"
+      },
+      {
+        "id": "c2",
+        "text": "チェックしませんでした"
+      },
+      {
+        "id": "c3",
+        "text": "チェックしてもいいですか"
+      },
+      {
+        "id": "c4",
+        "text": "チェックしてもらえませんか"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "相手に対して丁寧に依頼（お願い）する表現は「V-てもらえませんか」です。文脈としてc4が唯一適切です。",
+    "source": "IRODORI Elementary 1 Lesson 9"
+  },
+  {
+    "id": "Q21",
+    "section": 2,
+    "category": "表現",
+    "difficulty": "Easy",
+    "instruction": "A coworker invites you to dinner on Friday, but you decline because you have plans.",
+    "question": "A「金曜日の夜、みんなで焼き肉を食べに行きませんか。」\nB「あ、金曜日は（　　）。すみません。」\nA「そうですか。じゃあ、また今度行きましょう。」",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "ちょっと用事があるんです"
+      },
+      {
+        "id": "c2",
+        "text": "とても楽しそうですね"
+      },
+      {
+        "id": "c3",
+        "text": "ぜひ一緒に行きたいです"
+      },
+      {
+        "id": "c4",
+        "text": "何時にどこへ行きますか"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "誘いに対して都合が悪く断る際、理由を説明して和らげる表現は「〜はちょっと用事があるんです」です。",
+    "source": "IRODORI Starter Lesson 12 / Elementary 1 Lesson 7"
+  },
+  {
+    "id": "Q22",
+    "section": 2,
+    "category": "表現",
+    "difficulty": "Easy",
+    "instruction": "This is an interaction at the entrance when visiting a friend's house.",
+    "question": "A（友人）「あ、キムさん。いらっしゃい。どうぞ上がってください。」\nB（訪問者）「（　　）。これ、近くのお店で買ったお菓子です。どうぞ。」",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "行っていらっしゃい"
+      },
+      {
+        "id": "c2",
+        "text": "おじゃまします"
+      },
+      {
+        "id": "c3",
+        "text": "ごちそうさまでした"
+      },
+      {
+        "id": "c4",
+        "text": "お世話になりました"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "人の家を訪問して家の中に入るときの挨拶は「おじゃまします」です。",
+    "source": "IRODORI Elementary 1 Lesson 17"
+  },
+  {
+    "id": "Q23",
+    "section": 2,
+    "category": "表現",
+    "difficulty": "Medium",
+    "instruction": "At work, a coworker is carrying a heavy load, and you offer to help.",
+    "question": "A「うわあ、この箱、すごく重いですね……。」\nB「大変そうですね。一つ（　　）。」\nA「あ、ありがとうございます。助かります。」",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "持ちたいです"
+      },
+      {
+        "id": "c2",
+        "text": "持ってください"
+      },
+      {
+        "id": "c3",
+        "text": "持ちましょうか"
+      },
+      {
+        "id": "c4",
+        "text": "持つことになりました"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "困っている相手に対して自ら手助けを提案・申し出る表現は「V-ましょうか」です。",
+    "source": "IRODORI Starter Lesson 10 / Elementary 1 Lesson 10"
+  },
+  {
+    "id": "Q24",
+    "section": 2,
+    "category": "表現",
+    "difficulty": "Easy",
+    "instruction": "At work, this is a greeting to coworkers or a supervisor when you finish your work and leave before them.",
+    "question": "A「今日の作業はすべて終わりましたので、（　　）。」\nB「あ、お疲れ様でした。気をつけて帰ってくださいね。」",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "お先に失礼します"
+      },
+      {
+        "id": "c2",
+        "text": "いってまいります"
+      },
+      {
+        "id": "c3",
+        "text": "おじゃまいたします"
+      },
+      {
+        "id": "c4",
+        "text": "お待たせいたしました"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "職場で周りの人より先に退勤・帰社する際の標準的な挨拶表現は「お先に失礼します」です。",
+    "source": "IRODORI Starter Lesson 1"
+  },
+  {
+    "id": "Q25",
+    "section": 2,
+    "category": "表現",
+    "difficulty": "Medium",
+    "instruction": "At a hotel reception, a staff member confirms a customer's reservation.",
+    "question": "A（客）「すみません、予約しているスミスですが、チェックインをお願いします。」\nB（スタッフ）「スミス様ですね。お名前を確認いたしますので、（　　）。」",
+    "material": null,
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "どうぞお入りください"
+      },
+      {
+        "id": "c2",
+        "text": "少々お待ちください"
+      },
+      {
+        "id": "c3",
+        "text": "お気をつけてお越しください"
+      },
+      {
+        "id": "c4",
+        "text": "ごちそうさまでした"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "接客の場面などで確認や準備のために相手に一時待機を求める丁寧な表現は「少々お待ちください」です。",
+    "source": "IRODORI Elementary 2 Lesson 16"
+  },
+  {
+    "id": "Q26",
+    "section": 3,
+    "category": "内容理解（社交的なやりとり）",
+    "difficulty": "Easy",
+    "instruction": "",
+    "question": "What time and where will the two people meet on Sunday?",
+    "material": null,
+    "audioScript": "男性：パクさん、今週の土曜日、一緒にバーベキューに行きませんか？公園でやるんです。\n女性：あー、土曜日ですか。行きたいんですけど、土曜日はちょっとバイトがあるんです。\n男性：そうですか。じゃあ、日曜日はどうですか？日曜日もやってますよ。\n女性：日曜日なら大丈夫です！何時にどこに集合ですか？\n男性：朝10時に、公園の入口で会いましょう。\n女性：わかりました。楽しみにしています。",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "土曜日の朝10時に公園の入口"
+      },
+      {
+        "id": "c2",
+        "text": "日曜日の朝10時に公園の入口"
+      },
+      {
+        "id": "c3",
+        "text": "土曜日の朝10時にバイト先の前"
+      },
+      {
+        "id": "c4",
+        "text": "日曜日の朝10時に駅の改札の前"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "女性は土曜日にバイトがあるため断り、日曜日なら大丈夫だと返答しています。男性が日曜日の朝10時に公園の入口で会うことを提案し、女性も同意しているためc2が正解です。",
+    "source": "IRODORI Starter Lesson 8, Lesson 12 / Elementary 1 Lesson 7"
+  },
+  {
+    "id": "Q27",
+    "section": 3,
+    "category": "内容理解（社交的なやりとり）",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "What does the man often do on his days off these days?",
+    "material": null,
+    "audioScript": "女性：佐藤さん、休みの日によく何をしますか？\n男性：そうですね。前はよく海へ釣りに行っていましたが、最近は山登りにはまっています。今週末も行く予定です。\n女性：へえ、山登りですか。写真とかも撮るんですか？\n男性：ええ。山の上で写真を撮るのがすごく楽しいですよ。今度写真見せますね。\n女性：はい、ぜひ見せてください！",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "海に行って釣りをしている"
+      },
+      {
+        "id": "c2",
+        "text": "山に登って写真を撮っている"
+      },
+      {
+        "id": "c3",
+        "text": "公園を散歩して写真を撮っている"
+      },
+      {
+        "id": "c4",
+        "text": "家で山登りの本を読んでいる"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "男性は「前はよく海へ釣りに行っていましたが、最近は山登りにはまっています」「山の上で写真を撮るのがすごく楽しい」と話しています。",
+    "source": "IRODORI Starter Lesson 9 / Elementary 1 Lesson 5"
+  },
+  {
+    "id": "Q28",
+    "section": 3,
+    "category": "内容理解（社交的なやりとり）",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "What did the man advise Ms. Wang to do?",
+    "material": null,
+    "audioScript": "男性：ワンさん、こんにちは。最近暑いですが、体調はどうですか？\n女性：こんにちは。実は最近、夜に暑くて何度も目が覚めてしまって、よく眠れないんです。\n男性：そうですか。エアコンのタイマーが切れた後に暑くなるのかもしれませんね。設定温度を少し高めにして、朝までつけておくといいですよ。\n女性：あ、そうですか。じゃあ、今夜試してみます。ありがとうございます。",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "エアコンのタイマーを夜中に切れるようにセットする"
+      },
+      {
+        "id": "c2",
+        "text": "エアコンの温度を高めにして朝までつけておく"
+      },
+      {
+        "id": "c3",
+        "text": "エアコンを使わないで窓を開けて寝る"
+      },
+      {
+        "id": "c4",
+        "text": "寝る前に冷たい水を飲んで体温を下げる"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "男性は「設定温度を少し高めにして、朝までつけておくといいですよ」と勧め、女性も「今夜試してみます」と同意しているため、c2が正解です。",
+    "source": "IRODORI Elementary 1 Lesson 12, Lesson 15 / Elementary 2 Lesson 3"
+  },
+  {
+    "id": "Q29",
+    "section": 3,
+    "category": "内容理解（社交的なやりとり）",
+    "difficulty": "Hard",
+    "instruction": "",
+    "question": "What will Maria eat after this?",
+    "material": null,
+    "audioScript": "女性：マリアさん、お寿司美味しかったですか？こちらの「エビの天ぷら」もどうぞ。出来立てですよ。\n男性：あ、すみません。実は私、エビのアレルギーがあるので、食べられないんです。\n女性：あら、そうでしたか！うっかりしていました、ごめんなさいね。じゃあ、こちらの野菜の煮物はどうですか？エビは入っていませんよ。\n男性：あ、ありがとうございます！それ、いただきます。",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "エビの天ぷら"
+      },
+      {
+        "id": "c2",
+        "text": "野菜の煮物"
+      },
+      {
+        "id": "c3",
+        "text": "もう一度お寿司"
+      },
+      {
+        "id": "c4",
+        "text": "何も食べない"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "友人が勧めた「エビの天ぷら」に対し、マリアさんは「エビのアレルギーがあるので食べられない」と理由を明確にして辞退し、改めて勧められたエビの入っていない「野菜の煮物」を食べると答えたため、c2が正解です。",
+    "source": "IRODORI Elementary 1 Lesson 17 / Elementary 2 Lesson 7"
+  },
+  {
+    "id": "Q30",
+    "section": 3,
+    "category": "内容理解（店や公共機関でのやりとり）",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "Where is the apple jam?",
+    "material": null,
+    "audioScript": "客：すみません、りんごのジャムを探しているんですが、どこにありますか？\n店員：ジャムですね。あちらのパンコーナーの隣にございます。\n客：あ、行ってみたんですが、いちごとブルーベリーしかなくて……。\n店員：あ、申し訳ございません。りんごジャムは奥の棚の「季節の特設コーナー」に移動しております。醤油や味噌が置いてある棚の向かい側です。\n客：あ、そうですか。行ってみます。ありがとうございます。",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "パンコーナーの隣"
+      },
+      {
+        "id": "c2",
+        "text": "レジの前のワゴン"
+      },
+      {
+        "id": "c3",
+        "text": "醤油や味噌の棚の向かい側の特設コーナー"
+      },
+      {
+        "id": "c4",
+        "text": "お店の入口の近くの棚"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "パンコーナーの隣にはいちごとブルーベリーしかなく、店員は「奥の棚の『季節の特設コーナー』」「醤油や味噌が置いてある棚の向かい側」にあると説明しています。",
+    "source": "IRODORI Starter Lesson 10 / Elementary 1 Lesson 11"
+  },
+  {
+    "id": "Q31",
+    "section": 3,
+    "category": "内容理解（店や公共機関でのやりとり）",
+    "difficulty": "Easy",
+    "instruction": "",
+    "question": "What did the female customer order instead of a drink?",
+    "material": null,
+    "audioScript": "店員：ご注文を確認いたします。日替わりランチセットが一つと、アイスコーヒーが一つですね。\n客：あ、すみません。セットの飲み物は、追加料金でスープに変更できますか？\n店員：はい、プラス100円でコーンスープに変更いただけます。\n客：じゃあ、アイスコーヒーじゃなくてコーンスープにしてください。\n店員：かしこまりました。日替わりランチセットとコーンスープですね。少々お待ちください。",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "アイスコーヒー"
+      },
+      {
+        "id": "c2",
+        "text": "ホットティー"
+      },
+      {
+        "id": "c3",
+        "text": "コーンスープ"
+      },
+      {
+        "id": "c4",
+        "text": "サラダ"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "女性客は最初のアイスコーヒーからプラス100円でコーンスープに変更するよう頼み、店員も同意して受託しているため、c3が正解です。",
+    "source": "IRODORI Starter Lesson 4 / Elementary 1 Lesson 6"
+  },
+  {
+    "id": "Q32",
+    "section": 3,
+    "category": "内容理解（店や公共機関でのやりとり）",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "What must the male patient do after filling out the form?",
+    "material": null,
+    "audioScript": "受付：診察券をお出しいただけますか？\n患者：あ、すみません。今日診察券を忘れてしまって……。保険証は持っています。\n受付：わかりました。では、こちらの用紙にお名前とご住所、生年月日をご記入ください。記入が終わりましたら、保険証と一緒にあちらの箱に入れてお待ちください。\n患者：わかりました。熱を測る必要はありますか？\n受付：あ、受付の横に体温計がありますので、熱を測って、その数値を用紙の右上に書いてくださいね。\n患者：はい、わかりました。",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "診察券を探して受付に渡す"
+      },
+      {
+        "id": "c2",
+        "text": "体温を測って数値を書いて、保険証と一緒に箱に入れる"
+      },
+      {
+        "id": "c3",
+        "text": "体温だけ測って、そのまま待合室の椅子に座って待つ"
+      },
+      {
+        "id": "c4",
+        "text": "住所と名前だけを書いて、受付の人に直接手渡す"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "受付スタッフは、用紙への記入、体温計での検温と数値記入、そして保険証と一緒に指定の箱に入れるよう案内しています。",
+    "source": "IRODORI Elementary 1 Lesson 12 / Elementary 2 Lesson 3"
+  },
+  {
+    "id": "Q33",
+    "section": 3,
+    "category": "内容理解（店や公共機関でのやりとり）",
+    "difficulty": "Hard",
+    "instruction": "",
+    "question": "What must the woman do first in order to borrow books?",
+    "material": null,
+    "audioScript": "利用者：すみません。本を借りたいのですが、こちらのカードで借りられますか？\n職員：はい、図書カードですね。……あ、お客様、こちらのカードは有効期限が切れております。更新手続きには身分証明書が必要となりますが、お持ちですか？\n利用者：あ、今日は免許証も保険証も持ってくるのを忘れてしまいました……。\n職員：そうですか。では、本日はお貸出しができませんので、身分証明書をお持ちになって、またお越しください。\n利用者：わかりました。じゃあ、次回持ってくることにします。",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "新しい図書カードの再発行料金を払う"
+      },
+      {
+        "id": "c2",
+        "text": "身分証明書を持って出直す"
+      },
+      {
+        "id": "c3",
+        "text": "今持っているカードでそのまま借りる"
+      },
+      {
+        "id": "c4",
+        "text": "住所と電話番号を用紙に書いて手渡す"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "カードの有効期限が切れており、更新に必要な身分証明書を忘れたため、職員から「本日貸し出しできないので身分証明書を持ってまた来るように」と説明され、女性も同意したためc2が正解です。",
+    "source": "IRODORI Starter Lesson 8 / Elementary 1 Lesson 4 / Elementary 2 Lesson 13"
+  },
+  {
+    "id": "Q34",
+    "section": 3,
+    "category": "内容理解（店や公共機関でのやりとり）",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "What time does the man's Shinkansen depart?",
+    "material": null,
+    "audioScript": "客：すみません。明日の朝、京都に行きたいんですが、指定席のチケットはまだ買えますか？\n駅員：明日の朝ですね。何時頃のご出発をご希望ですか？\n客：8時頃の電車に乗りたいです。\n駅員：少々お待ちください……。あ、申し訳ありません。8時発の新幹線は指定席が満席ですね。次の8時30分発でしたら、指定席がお取りできますが、いかがですか？\n客：うーん、9時の会議には遅れますが仕方ないですね。じゃあ、8時30分の指定席をお願いします。\n駅員：かしこまりました。大人1名様ですね。",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "8時00分"
+      },
+      {
+        "id": "c2",
+        "text": "8時30分"
+      },
+      {
+        "id": "c3",
+        "text": "9時00分"
+      },
+      {
+        "id": "c4",
+        "text": "9時30分"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "8時発は満席のため、駅員が提案した8時30分発の指定席を購入することにしたため、正解はc2です。",
+    "source": "IRODORI Starter Lesson 13 / Elementary 2 Lesson 6"
+  },
+  {
+    "id": "Q35",
+    "section": 3,
+    "category": "内容理解（指示・アナウンス）",
+    "difficulty": "Easy",
+    "instruction": "",
+    "question": "What must the workers do before starting to assemble the boxes?",
+    "material": null,
+    "audioScript": "班長：みなさん、作業を始める前にお知らせがあります。今日は安全点検の日なので、いつもと順番が違います。先に道具の点検をしてチェックシートを提出してください。そのあとで、箱の組み立て作業に入ります。よろしくお願いします。",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "道具の点検をしてチェックシートを提出する"
+      },
+      {
+        "id": "c2",
+        "text": "昨日作った箱を倉庫に運ぶ"
+      },
+      {
+        "id": "c3",
+        "text": "完成した箱の数を数える"
+      },
+      {
+        "id": "c4",
+        "text": "壊れた道具を新しいものと交換する"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "班長は「先に道具の点検をしてチェックシートを提出してください。そのあとで、箱の組み立て作業に入ります」と指示しているため、組み立て前に最初に行うべき行動はc1です。",
+    "source": "IRODORI Elementary 1 Lesson 10 / Elementary 2 Lesson 10"
+  },
+  {
+    "id": "Q36",
+    "section": 3,
+    "category": "内容理解（指示・アナウンス）",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "Which of the following matches the content of the announcement about the time sale?",
+    "material": null,
+    "audioScript": "アナウンス：本日も当店をご利用いただき、ありがとうございます。ただいまより1階のお肉コーナーにおきまして、タイムセールを行います。パック入りの牛肉と豚肉が、すべて半額となります。タイムセールは、このあと午後5時までの20分間限定です。どうぞご利用ください。",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "1階で、午後5時までお肉が半額で買える"
+      },
+      {
+        "id": "c2",
+        "text": "2階で、午後5時までお肉が半額で買える"
+      },
+      {
+        "id": "c3",
+        "text": "1階で、午後5時半までお肉が半額で買える"
+      },
+      {
+        "id": "c4",
+        "text": "2階で、午後5時半までお魚が半額で買える"
+      }
+    ],
+    "correctChoiceId": "c1",
+    "explanation": "アナウンスで言及された場所（1階）、終了時間（午後5時まで）、対象品（お肉）の複数の情報を正しく聞き取って組み合わせる必要がある問題です。",
+    "source": "IRODORI Starter Lesson 10 / Elementary 2 Lesson 8"
+  },
+  {
+    "id": "Q37",
+    "section": 3,
+    "category": "内容理解（指示・アナウンス）",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "What must the residents of the apartment do by tonight?",
+    "material": null,
+    "audioScript": "管理者：住民の皆様にお知らせいたします。明日、10月6日の午前10時から午後2時まで、水道管の工事を行います。工事の間は水が出なくなりますので、料理や飲み水に必要な水は、今日の夜までに汲んで準備してください。ご協力をお願いいたします。",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "明日の工事の費用を管理者に払う"
+      },
+      {
+        "id": "c2",
+        "text": "必要な水を事前に汲んで準備しておく"
+      },
+      {
+        "id": "c3",
+        "text": "明日の午前10時までにアパートを出る"
+      },
+      {
+        "id": "c4",
+        "text": "水道管の工事を手伝う準備をする"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "明日の10時〜14時まで断水（水が出なくなる）ため、今日の夜までに必要な水を汲んで準備するよう指示されています。",
+    "source": "IRODORI Elementary 1 Lesson 3, Lesson 4 / Elementary 2 Lesson 15"
+  },
+  {
+    "id": "Q38",
+    "section": 3,
+    "category": "内容理解（指示・アナウンス）",
+    "difficulty": "Hard",
+    "instruction": "",
+    "question": "What should a passenger do to arrive at Higashi Station as early as possible?",
+    "material": null,
+    "audioScript": "車内アナウンス：お客様にお知らせいたします。ただいま前を走る電車で車両点検を行っているため、この電車は緑町駅で停車しております。こちらの電車の運転再開は午後3時15分頃を予定しております。なお、隣のホームにおります普通電車は、3分後の2時50分に発車し、終点の東駅まで先に到着いたします。東駅へお急ぎのお客様は、隣のホームの普通電車にお乗り換えください。",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "今乗っている電車の中で3時15分まで運転再開を待つ"
+      },
+      {
+        "id": "c2",
+        "text": "隣のホームの普通電車に乗り換える"
+      },
+      {
+        "id": "c3",
+        "text": "緑町駅の改札を出てバスに乗り換える"
+      },
+      {
+        "id": "c4",
+        "text": "緑町駅で降りて後から来る特急電車を待つ"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "アナウンスにおいて「今乗っている電車は3時15分まで動かない」のに対し、「隣のホームの普通電車が2時50分（3分後）に出発し、終点の東駅へ先に到着する」という複数の情報を比較理解し「隣の普通電車に乗り換える（c2）」と判断させます。",
+    "source": "IRODORI Starter Lesson 13 / Elementary 2 Lesson 6, Lesson 13"
+  },
+  {
+    "id": "Q39",
+    "section": 4,
+    "category": "内容理解",
+    "difficulty": "Easy",
+    "instruction": "",
+    "question": "What does the person who read this email need to do by 5:00 p.m. on Friday?",
+    "material": "件名：金曜日の懇親会（こんしんかい）について\n\nみなさん\nお疲れ様です。ヤマダです。\n\n今週金曜日（10日）の懇親会ですが、お店が変更になりました。\n最初は「さくら食堂」の予定でしたが、予約が取れなかったため「和風居酒屋 ふじ」で行います。\n時間は予定どおり19:00からです。会費は3,000円です。\n\n金曜日の17:00までにヤマダまで会費を持ってきてください。よろしくお願いします。",
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "「さくら食堂」に行って予約をする"
+      },
+      {
+        "id": "c2",
+        "text": "ヤマダさんに会費の3,000円を渡す"
+      },
+      {
+        "id": "c3",
+        "text": "「和風居酒屋 ふじ」に直接行って3,000円を払う"
+      },
+      {
+        "id": "c4",
+        "text": "懇親会の開始時間をヤマダさんに連絡する"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "メール末尾に「金曜日の17:00までにヤマダまで会費を持ってきてください」と明確に指示されているため、c2が正解です。",
+    "source": "IRODORI Elementary 1 Lesson 15 / Elementary 2 Lesson 10"
+  },
+  {
+    "id": "Q40",
+    "section": 4,
+    "category": "内容理解",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "What time and where will Kim and Ann meet tomorrow?",
+    "material": "アン：キムさん、明日の日曜日、一緒にお祭りに行きませんか？\nキム：いいですね！ぜひ行きたいです。何時ごろ行きますか？\nアン：お祭りは午後3時からですが、昼ご飯を食べてから行きませんか？12時半に駅の東口でどうですか？\nキム：あ、すみません。明日は午前中にアルバイトがあって、終わるのが12時なんです。家に帰って準備するので、1時半なら駅に行けます。\nアン：わかりました！じゃあ、1時半に駅の東口で会いましょう。昼ご飯は遅めで大丈夫です。",
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "午後12時半に駅の東口"
+      },
+      {
+        "id": "c2",
+        "text": "午後1時半に駅の東口"
+      },
+      {
+        "id": "c3",
+        "text": "午後3時に祭り会場の入口"
+      },
+      {
+        "id": "c4",
+        "text": "午後12時にキムさんのアルバイト先"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "アンが最初12時半を提案しましたが、キムの都合（アルバイトと準備）により1時半に変更を申し出、アンが「じゃあ、1時半に駅の東口で会いましょう」と最終合意したため、c2が正解です。",
+    "source": "IRODORI Starter Lesson 12 / Elementary 1 Lesson 1"
+  },
+  {
+    "id": "Q41",
+    "section": 4,
+    "category": "内容理解",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "Which of the following is correct if you want to move around inside the apartment building at 11:00 a.m. on October 15?",
+    "material": "【マンション住民の皆様へ】\nエレベーター定期点検のお知らせ\n\nいつもご理解とご協力をいただき、ありがとうございます。\n以下の日時でエレベーターの定期点検を実施します。\n点検中はエレベーターを使用できませんので、階段をご利用ください。\n\n日時：10月15日（水） 午前10:00 〜 午後1:00\n\n※点検作業中も、非常用の階段は利用できます。\n※大きな荷物がある方は、午前10時前か午後1時以降に運んでいただくようお願いいたします。\n\n緑ハイツ管理事務所",
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "エレベーターを使って移動できる"
+      },
+      {
+        "id": "c2",
+        "text": "エレベーターは使えないので階段を使う"
+      },
+      {
+        "id": "c3",
+        "text": "点検中のため非常階段も使うことができない"
+      },
+      {
+        "id": "c4",
+        "text": "管理事務所に連絡してエレベーターを動かしてもらう"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "午前10:00〜午後1:00はエレベーター点検中のため「エレベーターを使用できませんので、階段をご利用ください」「非常用の階段は利用できます」と書かれているため、c2が正解です。",
+    "source": "IRODORI Elementary 1 Lesson 3 / Elementary 2 Lesson 13"
+  },
+  {
+    "id": "Q42",
+    "section": 4,
+    "category": "内容理解",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "What should you do if you want to return a CD when the library is closed?",
+    "material": "【図書室からのお知らせ】\n\n・本は1人5冊まで、2週間借りることができます。\n・返却（へんきゃく）するときは、カウンターに本を持ってきてください。\n・図書室が閉まっている時間は、入口の横にある「返却ボックス」に本を入れてください。\n・ただし、CDやDVDは割れやすいため、返却ボックスには入れないでください。必ず開館時間中にカウンターへ直接お返しください。",
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "入口の横にある返却ボックスに入れる"
+      },
+      {
+        "id": "c2",
+        "text": "返却ボックスに入れず、開いている時間にカウンターへ持っていく"
+      },
+      {
+        "id": "c3",
+        "text": "図書室の入口の前に置いておく"
+      },
+      {
+        "id": "c4",
+        "text": "郵送で図書室宛てに送る"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "「CDやDVDは割れやすいため、返却ボックスには入れないでください。必ず開館時間中にカウンターへ直接お返しください」と注意書きがあるため、閉まっている時間には返却ボックスに入れず、開いている時間に持っていく必要があるc2が正解です。",
+    "source": "IRODORI Starter Lesson 8 / Elementary 1 Lesson 3"
+  },
+  {
+    "id": "Q43",
+    "section": 4,
+    "category": "内容理解",
+    "difficulty": "Hard",
+    "instruction": "",
+    "question": "Which is the correct way to dispose of an empty plastic bottle?",
+    "material": "【給湯室（きゅうとうしつ）利用ルール変更のお知らせ】\n\n来週の月曜日（10月20日）から、給湯室のごみ箱のルールが変わります。\nこれまでペットボトルと缶は同じごみ箱に捨てていましたが、新しいごみ箱を用意しました。\n\n・青いごみ箱：ペットボトルのみ（キャップとラベルははがしてプラスチックごみへ）\n・黄色のごみ箱：缶・ビンのみ\n\nごみを捨てるときは、よく洗ってから分別（ぶんべつ）して捨ててください。ご協力をお願いします。",
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "キャップとラベルをつけたまま青いごみ箱に捨てる"
+      },
+      {
+        "id": "c2",
+        "text": "中を洗って、キャップとラベルをはがしてから青いごみ箱に捨てる"
+      },
+      {
+        "id": "c3",
+        "text": "缶と一緒に黄色のごみ箱に捨てる"
+      },
+      {
+        "id": "c4",
+        "text": "洗わずにそのままプラスチックごみ箱に捨てる"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "「よく洗ってから」「キャップとラベルははがしてプラスチックごみへ」「青いごみ箱：ペットボトルのみ」と指定されているため、条件を満たすc2が正解です。",
+    "source": "IRODORI Elementary 1 Lesson 11 / Elementary 2 Lesson 15"
+  },
+  {
+    "id": "Q44",
+    "section": 4,
+    "category": "内容理解",
+    "difficulty": "Hard",
+    "instruction": "",
+    "question": "Which of the following matches the information in the notice?",
+    "material": "【インフルエンザ予防接種（よぼうせっしゅ）のご案内】\n\n・期間：11月1日 〜 12月25日\n・費用：3,500円（当院に通院中の方は 3,000円）\n・予約：電話またはウェブサイトから予約してください。\n\n※ワクチンの数に限りがあるため、予約のない方は当日接種できません。\n※中学生以下の方は、必ず保護者（ほごしゃ）と一緒に来てください。\n※当日は、健康保険証を忘れないでお持ちください。",
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "予約をしなくても当日病院に行けば注射を受けられる"
+      },
+      {
+        "id": "c2",
+        "text": "当院に通院中の人は、3,000円で受けられる"
+      },
+      {
+        "id": "c3",
+        "text": "11月1日より前でも電話をすれば注射を受けられる"
+      },
+      {
+        "id": "c4",
+        "text": "中学生以下でも1人で来れば注射を受けられる"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "本文の費用欄に「3,500円（当院に通院中の方は 3,000円）」と記載されているため、c2が正しい記述です。",
+    "source": "IRODORI Elementary 1 Lesson 12 / Elementary 2 Lesson 3"
+  },
+  {
+    "id": "Q45",
+    "section": 4,
+    "category": "情報検索",
+    "difficulty": "Easy",
+    "instruction": "",
+    "question": "Park, an office worker, wants to use the facility on a weekday from 6:00 p.m. after work. How much is the fee for one session?",
+    "material": "【市民スポーツセンター 利用案内】\n\n■ 営業時間と料金（1回・大人）\n┌──────────┬─────────────┬───────┐\n│ 区分     │ 利用時間    │ 料金  │\n├──────────┼─────────────┼───────┤\n│ 平日昼間 │ 9:00〜17:00 │ 500円 │\n│ 平日夜間 │17:00〜21:00 │ 700円 │\n│ 土日祝日 │ 9:00〜21:00 │ 800円 │\n└──────────┴─────────────┴───────┘\n※休館日：毎週月曜日（月曜日が祝日の場合は開館し、翌火曜日が休館）\n※毎月第3日曜日は「市民感謝デー」のため、どなたも半額（400円）で利用できます。",
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "400円"
+      },
+      {
+        "id": "c2",
+        "text": "500円"
+      },
+      {
+        "id": "c3",
+        "text": "700円"
+      },
+      {
+        "id": "c4",
+        "text": "800円"
+      }
+    ],
+    "correctChoiceId": "c3",
+    "explanation": "平日の18時は「平日夜間（17:00〜21:00）」に該当するため、料金は700円（c3）となります。",
+    "source": "IRODORI Starter Lesson 8 / Elementary 1 Lesson 8"
+  },
+  {
+    "id": "Q46",
+    "section": 4,
+    "category": "情報検索",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "You want to join a course held on Sunday with a fee of 1,800 yen or less. Which course is it?",
+    "material": "【週末のお料理教室 11月コース】\n\n┌───┬─────────────┬───────────┬────────┬───────────┐\n│No.│ コース名    │ 開催日時  │ 参加費 │ 持ち物    │\n├───┼─────────────┼───────────┼────────┼───────────┤\n│ 1 │ 初めての和食 │11/8(土)10:00〜│ 2,000円│ エプロン、ふきん│\n│ 2 │ 簡単お弁当  │11/9(日)14:00〜│ 1,500円│ エプロン  │\n│ 3 │ 手作りパン   │11/15(土)10:00〜│ 2,500円│ エプロン、筆記用具│\n│ 4 │ アジアン料理 │11/16(日)10:00〜│ 2,000円│ エプロン、ふきん│\n└───┴─────────────┴───────────┴────────┴───────────┤\n※定員は各コース10名（先着順）。\n※持ち物の「ふきん」を持参できるコースのみ、持ち帰り用の箱が付いてきます。",
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "No.1 初めての和食"
+      },
+      {
+        "id": "c2",
+        "text": "No.2 簡単お弁当"
+      },
+      {
+        "id": "c3",
+        "text": "No.3 手作りパン"
+      },
+      {
+        "id": "c4",
+        "text": "No.4 アジアン料理"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "「日曜日」かつ「参加費1,800円以下」の2条件を満たすのは、No.2（11/9 日曜日、1,500円）の「簡単お弁当」のみです。",
+    "source": "IRODORI Starter Lesson 17 / Elementary 1 Lesson 16"
+  },
+  {
+    "id": "Q47",
+    "section": 4,
+    "category": "情報検索",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "Ali does not eat meat. Ali wants to order a meal with a drink for 900 yen or less. Which of the following is the correct choice for Ali?",
+    "material": "【レストラン さくら ランチメニュー（11:30〜14:00）】\n\n┌──────────────┬───────┬──────────────┬────────────────────────┐\n│ メニュー名   │ 価格  │ 肉の使用     │ セット内容              │\n├──────────────┼───────┼──────────────┼────────────────────────┤\n│ A. 豚肉炒め定食│ 850円 │ あり（豚肉） │ ご飯、味噌汁、小鉢      │\n│ B. 焼き魚定食 │ 800円 │ なし（魚）   │ ご飯、味噌汁、小鉢      │\n│ C. 野菜カレー │ 820円 │ なし（野菜） │ サラダ                  │\n│ D. 海鮮パスタ │ 950円 │ なし（海鮮） │ サラダ、スープ、ドリンク│\n└──────────────┴───────┴──────────────┴────────────────────────┘\n※ A・B・Cのメニューは、プラス100円でセットドリンク（コーヒーまたは紅茶）をつけられます。\n※ Dの海鮮パスタには、最初からセットドリンクが含まれています。",
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "豚肉炒め定食にドリンクをつける"
+      },
+      {
+        "id": "c2",
+        "text": "焼き魚定食にドリンクをつける"
+      },
+      {
+        "id": "c3",
+        "text": "野菜カレーにドリンクをつける"
+      },
+      {
+        "id": "c4",
+        "text": "海鮮パスタをたのむ"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "「肉不使用」「ドリンク付き」「900円以内」の3条件を完全に満たすのは、Bの焼き魚定食（800円）＋ドリンク（100円）＝合計900円のみです。",
+    "source": "IRODORI Starter Lesson 4 / Elementary 1 Lesson 6"
+  },
+  {
+    "id": "Q48",
+    "section": 4,
+    "category": "情報検索",
+    "difficulty": "Hard",
+    "instruction": "",
+    "question": "You want to arrive at Midori Hospital by 9:00 a.m. Which is the latest bus you can take from Minami Station?",
+    "material": "【南駅発 みどり病院前行き バス時刻表（平日）】\n\n■ 時刻表\n┌───┬──────────────────────────────────────────┐\n│ 時 │ 発車時刻（[直]＝直行便 / [経]＝公園経由便） │\n├───┼──────────────────────────────────────────┤\n│ 8 │ 05分 [経] , 20分 [直] , 35分 [経] , 40分 [直] │\n│ 9 │ 00分 [直] , 15分 [経]                         │\n└───┴──────────────────────────────────────────┘\n\n■ 系統と所要時間\n・ [直] 直行便：みどり病院前まで【所要時間 15分】\n・ [経] 公園経由便：公園を経由してみどり病院前まで【所要時間 25分】",
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "8時05分発 [経]"
+      },
+      {
+        "id": "c2",
+        "text": "8時20分発 [直]"
+      },
+      {
+        "id": "c3",
+        "text": "8時35分発 [経]"
+      },
+      {
+        "id": "c4",
+        "text": "8時40分発 [直]"
+      }
+    ],
+    "correctChoiceId": "c4",
+    "explanation": "各便の到着時間は、8:05[経]→8:30着、8:20[直]→8:35着、8:35[経]→9:00着、8:40[直]→8:55着です。午前9時までに到着できる便の中で、南駅を出発する時刻が最も遅いのは「8時40分発 [直]（c4）」となります。",
+    "source": "IRODORI Starter Lesson 13 / Elementary 1 Lesson 7"
+  },
+  {
+    "id": "Q49",
+    "section": 4,
+    "category": "情報検索",
+    "difficulty": "Hard",
+    "instruction": "",
+    "question": "You want to throw away an empty juice can and a glass cup. Which is the correct combination of collection days?",
+    "material": "【中央区 ごみ収集（しゅうしゅう）曜日一覧】\n\n┌───────────────┬─────────────┬──────────────┐\n│ ごみの種類    │ 収集曜日   │ 出し方の注意               │\n├───────────────┼─────────────┼──────────────┤\n│ 可燃ごみ（生ごみ・紙）│ 火曜日・金曜日│ 朝8:00までに指定袋で出す  │\n│ 不燃ごみ（金属・ガラス）│ 第2・第4水曜日│ 透明な袋に入れる           │\n│ 資源ごみ（缶・瓶・ペット）│ 木曜日     │ 洗って別々の袋に入れる    │\n│ プラスチック容器│ 月曜日     │ 中を洗って透明な袋に入れる│\n└───────────────┴─────────────┴──────────────┘\n※粗大ごみ（大きな家具・布団など）は毎週水曜日に電話予約が必要です。",
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "空き缶は月曜日に、ガラスのコップは火曜日に出す"
+      },
+      {
+        "id": "c2",
+        "text": "空き缶は木曜日に、ガラスのコップは第2・第4水曜日に出す"
+      },
+      {
+        "id": "c3",
+        "text": "両方とも火曜日・金曜日に指定袋に入れて出す"
+      },
+      {
+        "id": "c4",
+        "text": "両方とも水曜日に電話予約をしてから出す"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "空き缶は「資源ごみ」に該当し「木曜日」、ガラスのコップは「不燃ごみ」に該当し「第2・第4水曜日」に指定されているため、組み合わせとしてc2が正解です。",
+    "source": "IRODORI Elementary 1 Lesson 11 / Elementary 2 Lesson 15"
+  },
+  {
+    "id": "Q50",
+    "section": 4,
+    "category": "情報検索",
+    "difficulty": "Medium",
+    "instruction": "",
+    "question": "Which facility can you use for free after arriving at the hotel at 10:00 p.m.?",
+    "material": "【グランドホテル 館内施設のご案内】\n\n┌──────────────┬─────────────┬───────┬──────────────┐\n│ 施設・サービス│ 利用時間    │ 料金  │ 備考                       │\n├──────────────┼─────────────┼───────┼──────────────┤\n│ 朝食バイキング│ 6:30〜 9:30 │ 1,200円│ 1階レストラン（予約不要）   │\n│ 大浴場（温泉）│15:00〜24:00 │ 無料  │ 2階（部屋のタオルを持参）   │\n│ フィットネス  │10:00〜21:00 │ 500円 │ 3階（ウエア・靴の貸出あり） │\n│ コインランドリー│24時間営業  │ 300円 │ 2階（洗剤は自動投入）       │\n└──────────────┴─────────────┴───────┴──────────────┘\n※チェックイン前・チェックアウト後も、1階フロントにて無料で荷物をお預かりします。",
+    "audioScript": null,
+    "choices": [
+      {
+        "id": "c1",
+        "text": "朝食バイキング"
+      },
+      {
+        "id": "c2",
+        "text": "大浴場（温泉）"
+      },
+      {
+        "id": "c3",
+        "text": "フィットネス"
+      },
+      {
+        "id": "c4",
+        "text": "コインランドリー"
+      }
+    ],
+    "correctChoiceId": "c2",
+    "explanation": "大浴場は「利用時間 15:00〜24:00」「料金 無料」であるため、夜22時に無料で利用可能です。",
+    "source": "IRODORI Starter Lesson 8 / Elementary 2 Lesson 16"
+  }
+]
