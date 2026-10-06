@@ -1,21 +1,10 @@
 # JFT-Basic Mock Test 01
 
-Static GitHub Pages package. The completed application files and all 13 original 0.9x MP3 recordings are unchanged.
+Static GitHub Pages package. Keep index.html and .nojekyll at the repository root alongside data/ and vendor/.
+No build or server is required. All 13 original 0.9x recordings are included.
 
-## Publish
+Google Sheets result delivery is optional and requires setting the public Apps Script /exec URL in result-delivery-config.js. It is currently unset. Never add a Spreadsheet ID or credentials to these files. Deploy the separate google-apps-script/Code.gs following the supplied setup guide; do not publish that backend folder.
 
-Keep index.html and .nojekyll at the repository root, alongside data/ and vendor/.
-Repository Settings → Pages → Deploy from a branch → main → / (root) → Save.
-No build command, Node.js server, or package installation is required.
+Progress and pending results use localStorage in the current browser and site origin. PDF results download using the unchanged bundled PDF generator. Browser or OS settings may independently open downloaded files.
 
-Open the URL shown in Settings → Pages, usually https://USERNAME.github.io/jft-basic-mock-test-01/.
-
-## Notes
-
-Progress is saved in localStorage in the current browser. Localhost and the published site use separate storage. Reloading the same site restores progress, the choice order and play counts; the timer continues from the saved start time.
-
-The result PDF uses the bundled local PDF library. Student details and results are not submitted to a backend by this application.
-
-This browser-side version includes the answer keys and listening scripts in the public question JSON. It is a practice test, with no teacher access control or server-side grading.
-
-Question Bank, Teacher, JLPT and other future features are not included.
+The public question JSON contains answer keys and scripts. This is a practice test without login or access control. Future Question Bank, Teacher and JLPT features are not included.
