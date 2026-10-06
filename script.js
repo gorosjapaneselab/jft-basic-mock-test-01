@@ -2,8 +2,8 @@ import {TEST,validateQuestions,createAttempt,remaining,grade,validAttempt} from 
 import {readingWords,readingInstruction,splitMaterialTable,readingTableWidths} from './presentation.js';
 import {STUDENT_FIELDS,PART_NAMES} from './config.js';
 import {AudioPlayer} from './audio-player.js';
-import {RESULT_DELIVERY} from './result-delivery-config.js';
-import {ensureAttemptId,resultPayload,createResultDelivery} from './result-delivery.js';
+import {RESULT_DELIVERY} from './result-delivery-config.js?send-v=2';
+import {ensureAttemptId,resultPayload,createResultDelivery} from './result-delivery.js?payload-v=3';
 import {createResultPdf,resultDate,elapsedText} from './result-pdf.js';
 const audioPlayer=new AudioPlayer();
 let resultPdfUrl=null,resultSaveUnsubscribe=null;
@@ -53,7 +53,8 @@ function submit(expired){stopAudio();if(attempt.submittedAt)return;attempt.submi
 function showResult(){stopAudio();meta.hidden=true;renderParts();app.replaceChildren();const r=grade(questions,attempt),card=el('section',undefined,'card');card.append(el('div','TEST COMPLETE','eyebrow'),el('h1','Your results'));if(attempt.autoSubmitted)card.append(el('p','Time is up. Your test was submitted automatically.','notice'));const details=el('div',undefined,'results-student');for(const [label,value]of STUDENT_FIELDS.map(f=>[f.label,attempt.student[f.key]||''])){const d=el('div');d.append(el('span',label),el('strong',value));details.append(d);}card.append(details,el('p','Test started: '+resultDate(attempt),'result-date'));const scores=el('div',undefined,'scores');for(const [label,value]of [['Correct Answers',`${r.correct} / 50`],['Mock Score',`${r.score} / 250`]]){const d=el('div',undefined,'score');d.append(el('span',label),el('strong',value));scores.append(d);}card.append(scores,el('p','Mock score — not an official JFT-Basic scaled score.','muted'),el('h2','Section results'));for(const s of r.sections){const row=el('div',undefined,'section-result'),label=el('div',undefined,'row'),bar=el('div',undefined,'bar'),fill=el('div');label.append(el('span',`Part ${s.section} · ${PART_NAMES[s.section-1]}`),el('strong',`${s.percent}%`));fill.style.width=`${s.percent}%`;bar.append(fill);row.append(label,bar);card.append(row);}const elapsed=Math.floor(r.elapsedMs/1000);card.append(el('p',`Time taken: ${Math.floor(elapsed/60)} min ${String(elapsed%60).padStart(2,'0')} sec`));const actions=el('div',undefined,'actions');actions.append(button('Download Result',()=>downloadResult(r,card)));actions.append(button('Start a New Attempt',()=>showConfirm('Start a new attempt?','This will delete the current result and saved answers from this browser.',()=>{try{localStorage.removeItem(storageKey);attempt=null;showStart();}catch{app.prepend(el('p','Saved data could not be removed.','error'));}},'Start New Attempt'),'secondary'));card.append(actions);app.append(card);window.scrollTo({top:0,left:0,behavior:'instant'});bindResultSaving(card,r);}
 function bindResultSaving(card,result){
   resultSaveUnsubscribe?.();resultSaveUnsubscribe=null;
-  if(attempt.resultReportingVersion!==1)return;
+  if(!attempt?.submittedAt)return;
+  attempt.resultReportingVersion=1;
   try{
     ensureAttemptId(attempt);persist();const id=attempt.attemptId;
     resultDelivery.queue(resultPayload(questions,attempt,result,RESULT_DELIVERY));
@@ -64,7 +65,7 @@ function bindResultSaving(card,result){
       resultSaveUnsubscribe=resultDelivery.subscribe(update);update();
     }
     resultDelivery.send(id).catch(()=>{});
-  }catch{} // Reporting must never prevent the existing Result screen or PDF.
+  }catch(error){console.error('[JFT result delivery] result preparation failed',error);card.append(el('p','Your result is available. Saving for your teacher could not start. Please reload to retry.','muted'));} // Reporting never prevents the Result screen or PDF.
 }
 async function downloadResult(result,card){const downloadButton=card.querySelector('.actions button');downloadButton.disabled=true;downloadButton.textContent='Preparing PDF…';try{const pdf=await createResultPdf(attempt,result);const blob=new Blob([pdf],{type:'application/octet-stream'});if(resultPdfUrl)URL.revokeObjectURL(resultPdfUrl);resultPdfUrl=URL.createObjectURL(blob);card.querySelector('.pdf-save')?.remove();const link=el('a','Save PDF','pdf-save');link.href=resultPdfUrl;link.download='JFT-Basic-Mock-Test-01-result.pdf';card.append(link,el('p','If the download does not start, tap Save PDF.','muted'));link.click();}catch{card.append(el('p','The PDF could not be created. Please try again.','error'));}finally{downloadButton.disabled=false;downloadButton.textContent='Download Result';}}
 async function init(){try{const response=await fetch(TEST.dataUrl);if(!response.ok)throw new Error('Question data could not be loaded.');questions=await response.json();const errors=validateQuestions(questions);if(errors.length)throw new Error(errors.join('\n'));const audioResponse=await fetch(TEST.audioManifestUrl);if(!audioResponse.ok)throw new Error('Audio configuration could not be loaded.');audioManifest=await audioResponse.json();localStorage.setItem(`${storageKey}:check`,'1');localStorage.removeItem(`${storageKey}:check`);const raw=localStorage.getItem(storageKey);if(raw){attempt=JSON.parse(raw);if(!validAttempt(attempt,questions))throw new Error('Saved progress is invalid. Do not continue with this saved attempt.');if(!attempt.submittedAt){ensureAttemptId(attempt);attempt.resultReportingVersion=1;persist();}for(const q of questions.filter(q=>q.section===3))attempt.listening[q.id].audioFile=audioManifest[q.id]||null;if(attempt.submittedAt)showResult();else renderQuestion();}else showStart();setInterval(()=>{if(attempt&&!attempt.submittedAt)tick();},1000);}catch(e){app.replaceChildren(el('section',undefined,'card'));app.firstChild.append(el('h1','Unable to load the test'),el('p',e.message,'error'),el('p','Open the app using Start-Test.cmd. Browser storage must be enabled.'));}}
