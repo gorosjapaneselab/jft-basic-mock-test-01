@@ -1,6 +1,6 @@
 import {createTestPayload} from './result-test-data.js?payload-v=3';
 import {RESULT_DELIVERY} from './result-delivery-config.js?send-v=2';
-import {createResultDelivery,resultPayload,OUTBOX_KEY,LAST_POST_KEY} from './result-delivery.js?payload-v=3';
+import {createResultDelivery,resultPayload,OUTBOX_KEY,LAST_POST_KEY,postResult,checkSavedJsonp} from './result-delivery.js?payload-v=3';
 import {createAttempt,grade,TEST,validAttempt} from './core.js';
 const status=document.querySelector('#status'),send=document.querySelector('#send'),retry=document.querySelector('#retry'),preview=document.querySelector('#preview'),actual=document.querySelector('#actual'),name=document.querySelector('#name'),classInput=document.querySelector('#class');
 const key='jft-basic:developer-send-test:v3',logs=[];let payload,delivery,questions,mode='test';
@@ -15,4 +15,32 @@ send.onclick=retry.onclick=run;
 actual.onclick=()=>{try{const a=JSON.parse(localStorage.getItem(TEST.id+':attempt:v1')||'null');if(!validAttempt(a,questions)||!a.submittedAt)throw Error('このブラウザ・公開URLに完了済み受験結果がありません。受験した端末とブラウザで開いてください。');const copy=structuredClone(a);payload=resultPayload(questions,copy,grade(questions,copy),RESULT_DELIVERY);mode='actual';showPayload(payload);send.disabled=retry.disabled=true;log('実際の受験結果を読み取り専用で表示しました。模試画面の氏名・クラス・得点と比較してください。');}catch(e){log(e.message);}};
 document.querySelector('#posted').onclick=()=>{try{const capture=JSON.parse(localStorage.getItem(LAST_POST_KEY)||'null');if(!capture?.payload)throw Error('このブラウザでは新版の通常受験POSTがまだ記録されていません。公開アプリのResultを再読み込みし、保存状態を確認してください。');payload=capture.payload;mode='actual';showPayload(payload);send.disabled=retry.disabled=true;log('通常受験の実POSTデータ: '+payload.attemptId+' / '+new Date(capture.postedAt).toISOString());}catch(e){log(e.message);}};
 document.querySelector('#copy').onclick=async()=>{try{await navigator.clipboard.writeText(status.textContent+'\n'+document.querySelector('#payload').textContent);log('診断ログをコピーしました。');}catch{log('ログを選択してコピーしてください。');}};
-try{document.querySelector('#config').textContent='Build: payload-v3 | Test ID: '+RESULT_DELIVERY.reportTestId+' | URL: '+RESULT_DELIVERY.webAppUrl;questions=await(await fetch(TEST.dataUrl)).json();delivery=createResultDelivery({endpoint:RESULT_DELIVERY.webAppUrl,storage});delivery.subscribe(()=>{if(!payload)return;const r=delivery.get(payload.attemptId);if(r?.lastPostAt&&!logs.some(l=>l.includes('POST started: '+r.lastPostAt)))log('POST started: '+r.lastPostAt);if(r?.lastError){const line=r.lastError.phase+': '+r.lastError.message;if(!logs.some(l=>l.includes(line)))log(line);}});if(!delivery.configured)throw Error('送信先URLが未設定、または形式が不正です。');log('Modules loaded / URL valid / Ready');preview.disabled=actual.disabled=false;}catch(e){log('Setup error: '+e.message);}
+try{document.querySelector('#config').textContent='Build: replay-v4 | Test ID: '+RESULT_DELIVERY.reportTestId+' | URL: '+RESULT_DELIVERY.webAppUrl;questions=await(await fetch(TEST.dataUrl)).json();delivery=createResultDelivery({endpoint:RESULT_DELIVERY.webAppUrl,storage});delivery.subscribe(()=>{if(!payload)return;const r=delivery.get(payload.attemptId);if(r?.lastPostAt&&!logs.some(l=>l.includes('POST started: '+r.lastPostAt)))log('POST started: '+r.lastPostAt);if(r?.lastError){const line=r.lastError.phase+': '+r.lastError.message;if(!logs.some(l=>l.includes(line)))log(line);}});if(!delivery.configured)throw Error('送信先URLが未設定、または形式が不正です。');log('Modules loaded / URL valid / Ready');preview.disabled=actual.disabled=false;}catch(e){log('Setup error: '+e.message);}
+
+// Replay only the stored POST body. Never create an attempt, grade or alter its ID.
+export async function replayStoredPost({storage,endpoint,post=postResult,check=checkSavedJsonp,wait=ms=>new Promise(r=>setTimeout(r,ms)),onPayload=()=>{},onState=()=>{}}){
+ const capture=JSON.parse(storage.getItem(LAST_POST_KEY)||'null');
+ if(!capture?.payload)throw Error('直近の通常受験POSTデータがありません。受験した同じブラウザで開いてください。');
+ const original=capture.payload;
+ if(typeof original.attemptId!=='string'||!original.attemptId||!Array.isArray(original.answers)||original.answers.length!==50)throw Error('保存されたPOSTデータの形式を確認できません。内容を変更せず、再送を中止しました。');
+ onPayload(original);onState('POST送信中（元のAttempt IDを維持）…');
+ let postError=null,confirmationError=null;
+ try{await post(endpoint,original);}catch(error){postError=error;}
+ // Always issue POST, even if a previous local sent marker exists.
+ // An opaque fetch response alone is not proof of a saved row.
+ for(const delay of [1200,2500,5000]){
+  await wait(delay);onState('Apps Scriptの保存確認を待っています…');
+  try{if(await check(endpoint,original.attemptId)){onState('保存確認成功（Saved confirmed）。同じAttempt IDの行をSheetsで確認してください。既存行がある場合は重複追加しません。');return {saved:true,payload:original};}}catch(error){confirmationError=error;}
+ }
+ const message=postError?'POST通信失敗。保存確認も取得できませんでした。':'POST処理は完了しましたが、保存確認を取得できませんでした。';
+ onState(message+' 保存データはそのまま保持されています。');
+ return {saved:false,payload:original,postError:postError?.message||null,confirmationError:confirmationError?.message||null};
+}
+document.querySelector('#replay-posted').onclick=async()=>{
+ const buttons=[...document.querySelectorAll('button')],states=buttons.map(b=>b.disabled);buttons.forEach(b=>b.disabled=true);
+ const state=document.querySelector('#replay-status');state.textContent='保存済みPOSTデータを読み込んでいます…';
+ try{const result=await replayStoredPost({storage:localStorage,endpoint:RESULT_DELIVERY.webAppUrl,onPayload:p=>{payload=p;mode='posted-replay';showPayload(p);log('再送する実際のPOST payload: '+JSON.stringify(p));},onState:message=>{state.textContent=message;log(message);}});
+ if(result.postError)log('POST error: '+result.postError);if(result.confirmationError)log('Confirmation error: '+result.confirmationError);
+ }catch(error){state.textContent='再送失敗: '+error.message;log(state.textContent);}
+ finally{buttons.forEach((b,i)=>b.disabled=states[i]);if(mode==='posted-replay')send.disabled=retry.disabled=true;}
+};
