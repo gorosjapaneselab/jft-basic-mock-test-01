@@ -1,6 +1,16 @@
 // Display adaptations only. The finalized question data is never mutated.
 export const readingWords = Object.freeze({Q07:'受付',Q08:'改札',Q09:'道具'});
 export const readingInstruction = 'Choose the correct reading of the underlined word.';
+// Literal display runs only: keep parenthetical readings together without changing text.
+export function choiceTextRuns(text){
+  const runs=[];let cursor=0;
+  for(const match of text.matchAll(/（[^（）\r\n]+）|\([^()\r\n]+\)/gu)){
+    if(match.index>cursor)runs.push({text:text.slice(cursor,match.index),parenthetical:false});
+    runs.push({text:match[0],parenthetical:true});cursor=match.index+match[0].length;
+  }
+  if(cursor<text.length)runs.push({text:text.slice(cursor),parenthetical:false});
+  return runs;
+}
 export function splitMaterialTable(material) {
   const lines=material.split('\n'),start=lines.findIndex(line=>line.startsWith('┌'));
   if(start<0)return null;
