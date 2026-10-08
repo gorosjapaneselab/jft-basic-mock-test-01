@@ -1,4 +1,4 @@
-import {TEACHER_KEY,route,legacyExamRoute,authenticate,isTeacher,createRepository,addClass,createSchedule,activeClasses,renameClass} from './portal-model.js?ui=13';
+import {TEACHER_KEY,route,legacyExamRoute,authenticate,isTeacher,createRepository,addClass,createSchedule,activeClasses,renameClass} from './portal-model-v14.js';
 const app=document.querySelector('#portal'),repository=createRepository(localStorage);
 const node=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
 const link=(label,href)=>{const a=node('a',label);a.href=href;return a;};
