@@ -1,0 +1,20 @@
+import {DEMO_LOGIN,QUESTION_SETS} from './portal-config-v21.js';
+export const TEACHER_KEY='jft-basic:portal:teacher:v1';
+export const DATA_KEY='jft-basic:portal:data:v1';
+export function route(hash){return ['#login','#dashboard','#classes','#schedule','#results'].includes(hash)?hash:'#home';}
+export function legacyExamRoute(hash){return hash==='#teacher-e2e-9-75b3cc6d0ea24a30';}
+export function authenticate(loginId,password){return loginId.trim()===DEMO_LOGIN.loginId&&password===DEMO_LOGIN.password?{schoolId:DEMO_LOGIN.schoolId,teacherId:DEMO_LOGIN.teacherId}:null;}
+export function isTeacher(value){return value?.schoolId===DEMO_LOGIN.schoolId&&value?.teacherId===DEMO_LOGIN.teacherId;}
+export function emptyData(){return {schemaVersion:1,schools:[{schoolId:DEMO_LOGIN.schoolId,schoolName:'Demo School'}],teachers:[{schoolId:DEMO_LOGIN.schoolId,teacherId:DEMO_LOGIN.teacherId}],classes:[],tests:QUESTION_SETS.map(x=>({...x})),assessments:[],sessions:[],attempts:[]};}
+export function createRepository(storage){return {load(){const raw=storage.getItem(DATA_KEY);if(!raw)return emptyData();const data=JSON.parse(raw);if(data.schemaVersion!==1||!['schools','teachers','classes','tests','assessments','sessions','attempts'].every(k=>Array.isArray(data[k])))throw Error('Saved dashboard data could not be read. Existing data has been preserved.');return data;},save(data){const serialized=JSON.stringify(data);storage.setItem(DATA_KEY,serialized);if(storage.getItem(DATA_KEY)!==serialized)throw Error('Dashboard data could not be saved.');}};}
+const id=()=>crypto.randomUUID();
+export function addClass(data,teacher,className){if(!className.trim())throw Error('Enter a class name.');const record={classId:id(),schoolId:teacher.schoolId,teacherId:teacher.teacherId,className:className.trim(),archivedAt:null};data.classes.push(record);return record;}
+export function createSchedule(data,teacher,input){const test=data.tests.find(t=>t.testId===input.testId);const classes=[...new Set(input.classIds)];if(!input.testName.trim()||!test||!classes.length||classes.some(classId=>!data.classes.some(c=>c.classId===classId&&c.schoolId===teacher.schoolId&&classIsActive(c))))throw Error('Enter a test name and select at least one active class.');if(input.openAt||input.closeAt){if(!input.openAt||!input.closeAt||!Number.isFinite(Date.parse(input.openAt))||!Number.isFinite(Date.parse(input.closeAt))||Date.parse(input.closeAt)<=Date.parse(input.openAt))throw Error('Select a valid opening and closing time.');}
+const assessment={assessmentId:id(),schoolId:teacher.schoolId,teacherId:teacher.teacherId,testId:test.testId,testName:input.testName.trim(),targetClassIds:classes,createdAt:new Date().toISOString()};const session={sessionId:id(),assessmentId:assessment.assessmentId,schoolId:teacher.schoolId,kind:'main',openAt:input.openAt||null,closeAt:input.closeAt||null,timeZone:Intl.DateTimeFormat().resolvedOptions().timeZone,officialAttemptLimit:1,status:'draft'};data.assessments.push(assessment);data.sessions.push(session);return {assessment,session};}
+// Future formal result envelope. The existing Sheets payload is not changed.
+export function resultContext({schoolId,teacherId,classId,classNameSnapshot,testId,testNameSnapshot,assessmentId,sessionId,attemptId,mode='official'}){if(!['official','practice'].includes(mode))throw Error('Invalid attempt mode.');return {schoolId,teacherId,classId,classNameSnapshot,testId,testNameSnapshot,assessmentId,sessionId,attemptId,mode,includeInTeacherResults:mode==='official'};}
+export function makeUpSession(original,newId=id()){return {...original,sessionId:newId,kind:'make-up',status:'draft'};}
+
+export function classIsActive(c){return !c.archivedAt&&(!c.status||c.status==='active');}
+export function activeClasses(classes){return classes.filter(classIsActive);}
+export function renameClass(record,name){if(record.archivedAt)throw Error('Restore this class before renaming.');if(!name.trim())throw Error('Enter a class name.');record.className=name.trim();}
