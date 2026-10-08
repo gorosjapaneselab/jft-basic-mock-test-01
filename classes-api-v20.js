@@ -1,0 +1,33 @@
+// Teacher-only transport and durable mutation queue; no exam/result delivery imports.
+export const CLASS_PENDING_KEY='jft-basic:classes-pending:v1';
+export const CLASS_ACCESS_KEY='jft-basic:classes-access:v1';
+const uuid=()=>crypto.randomUUID();
+export function validClass(record,schoolId){return record&&typeof record.classId==='string'&&/^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/.test(record.classId)&&record.schoolId===schoolId&&typeof record.className==='string'&&record.className.trim()&&['active','archived'].includes(record.status)&&typeof record.createdAt==='string'&&typeof record.updatedAt==='string'&&Number.isFinite(Date.parse(record.createdAt))&&Number.isFinite(Date.parse(record.updatedAt));}
+export function trustedBridgeOrigin(origin){return origin==='https://script.google.com'||origin==='https://script.googleusercontent.com'||/^https:\/\/[a-z0-9-]+(?:\.script|-script)\.googleusercontent\.com$/.test(origin);}
+export function createBridgeTransport(endpoint,{win=window,doc=document,timeoutMs=20000}={}){
+  let iframe,peer,peerOrigin,connecting=null,bridgeId,removeListener,connectTimer,connectReject;
+  const waiting=new Map();
+  const dispose=()=>{clearTimeout(connectTimer);if(!peer)connectReject?.(Error('Classes connection was closed. Retry your operation.'));connectReject=null;removeListener?.();iframe?.remove();iframe=peer=null;connecting=null;for(const entry of waiting.values()){clearTimeout(entry.timer);entry.reject(Error('Classes connection was closed. Retry your operation.'));}waiting.clear();};
+  function connect(){if(peer)return Promise.resolve();if(connecting)return connecting;
+    if(!/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(endpoint))return Promise.reject(Error('Classes API URL is invalid.'));
+    bridgeId=uuid();connecting=new Promise((resolve,reject)=>{connectReject=reject;connectTimer=setTimeout(()=>{connectReject=null;dispose();reject(Error('Classes API is not ready. Update the Apps Script deployment, check the allowed origin, and retry.'));},timeoutMs);
+      const listener=event=>{const m=event.data;if(!trustedBridgeOrigin(event.origin)||m?.channel!=='jft-classes'||m.bridgeId!==bridgeId)return;
+        if(m.kind==='ready'&&!peer){peer=event.source;peerOrigin=event.origin;clearTimeout(connectTimer);connectReject=null;resolve();}
+        if(m.kind==='response'&&event.source===peer&&event.origin===peerOrigin){const pending=waiting.get(m.requestId);if(pending){clearTimeout(pending.timer);waiting.delete(m.requestId);pending.resolve(m.response);}}};
+      win.addEventListener('message',listener);removeListener=()=>win.removeEventListener('message',listener);iframe=doc.createElement('iframe');iframe.hidden=true;iframe.title='Classes connection';const url=new URL(endpoint);url.searchParams.set('action','classes_bridge');url.searchParams.set('bridgeId',bridgeId);iframe.src=url.href;doc.body.append(iframe);
+    });return connecting;
+  }
+  async function request(payload){await connect();const requestId=uuid();return new Promise((resolve,reject)=>{const timer=setTimeout(()=>{waiting.delete(requestId);reject(Error('Saving was not confirmed. Retry the same operation.'));},timeoutMs);waiting.set(requestId,{resolve,reject,timer});peer.postMessage({channel:'jft-classes',kind:'request',bridgeId,requestId,request:payload},peerOrigin);});}
+  return {request,dispose};
+}
+export function createClassesClient({identity,credential,storage,transport}){
+  let busy=null;const pendingKey=CLASS_PENDING_KEY+':'+identity.schoolId+':'+identity.teacherId;
+  function pending(){const raw=storage.getItem(pendingKey);if(!raw)return null;const value=JSON.parse(raw);if(value.schoolId!==identity.schoolId||value.teacherId!==identity.teacherId)throw Error('Pending Class data has a different owner. It was preserved.');return value;}
+  async function call(input){const access=credential();if(!access)throw Error('Connect Classes with the private access key first.');const r=await transport.request({...input,...identity,credential:access});if(!r?.ok)throw Object.assign(Error(r?.error||'Classes request failed.'),{rejectedWithoutWrite:r?.canDiscard===true});return r;}
+  async function list(){const r=await call({action:'list'});if(r.schoolId!==identity.schoolId||!Array.isArray(r.classes)||!r.classes.every(c=>validClass(c,identity.schoolId))||new Set(r.classes.map(c=>c.classId)).size!==r.classes.length)throw Error('Classes response was invalid.');return r.classes;}
+  async function send(operation){operation.rejectedWithoutWrite=false;storage.setItem(pendingKey,JSON.stringify(operation));if(storage.getItem(pendingKey)!==JSON.stringify(operation))throw Error('Pending Class operation could not be verified.');let r;try{r=await call(operation);}catch(error){if(error.rejectedWithoutWrite){operation.rejectedWithoutWrite=true;storage.setItem(pendingKey,JSON.stringify(operation));}throw error;}if(r.confirmed!==true||r.operationId!==operation.operationId||!validClass(r.class,identity.schoolId)||r.class.classId!==operation.classId)throw Error('Class save was not confirmed.');if(['add','rename','import'].includes(operation.action)&&r.class.className!==operation.className.trim())throw Error('Saved Class name did not match.');const expectedStatus=operation.action==='archive'?'archived':['add','restore'].includes(operation.action)?'active':operation.action==='import'?operation.status:null;if(expectedStatus&&r.class.status!==expectedStatus)throw Error('Saved Class status did not match.');storage.removeItem(pendingKey);return r.class;}
+  function mutate(action,input){if(busy)return busy;try{if(pending())return Promise.reject(Error('Retry the pending Class save before starting another change.'));if(action!=='add'&&!input.classId)throw Error('Class ID is missing. Existing data was not changed.');const operation={...input,action,operationId:uuid(),...identity};if(action==='add'&&!operation.classId)operation.classId=uuid();const raw=JSON.stringify(operation);storage.setItem(pendingKey,raw);if(storage.getItem(pendingKey)!==raw)throw Error('Class operation could not be saved locally. No request was sent.');busy=send(operation).finally(()=>busy=null);return busy;}catch(error){return Promise.reject(error);}}
+  function retry(){if(busy)return busy;try{const operation=pending();if(!operation)return Promise.reject(Error('No pending Class save.'));busy=send(operation).finally(()=>busy=null);return busy;}catch(error){return Promise.reject(error);}}
+  function discardRejected(){if(busy||pending()?.rejectedWithoutWrite!==true)throw Error('Only a server-confirmed rejected change can be discarded. Retry uncertain saves.');storage.removeItem(pendingKey);}
+  return {list,mutate,retry,pending,discardRejected};
+}
