@@ -1,6 +1,8 @@
-# Phase 2B — Shared Schedule Management v17
+# Phase 2B — Shared Schedule Management — UI v18
 
-Build: schedules-phase2b-v17.
+Build: schedules-phase2b-v18.
+
+UI v18 uses the unchanged v17 GAS backend. Already configured v17 installations need no GAS update or reinitialization. New schedules default to Asia/Manila. Existing schedule time zones and unedited timestamp precision are preserved. Native date/time inputs use minutes; Same day as opening controls only the editor.
 
 Classes and schedule plans share the existing authenticated GAS HTMLService bridge.
 Add Schedules.gs to the existing Apps Script project, replace ClassesBridge.html with the Phase 2B version, run initializeSchedules once, then update the existing deployment to a new version. Keep the same /exec URL, execute-as and access settings. Do not replace Code.gs or Classes.gs; do not change Results or Classes headers, data or Script Properties.

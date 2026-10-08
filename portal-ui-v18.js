@@ -1,9 +1,9 @@
-import {CLASSES_API_URL} from './portal-config.js?phase=2b18';
-import {CLASS_ACCESS_KEY,createClassesClient,createBridgeTransport} from './classes-api.js?phase=2b18';
-import {createSchedulesClient} from './schedules-api.js?phase=2b18';
-import {showSchedules,legacyScheduleDrafts} from './schedules-view.js?phase=2b18';
-import {showClasses} from './classes-view.js?phase=2b18';
-import {TEACHER_KEY,route,legacyExamRoute,authenticate,isTeacher,createRepository,activeClasses} from './portal-model.js?phase=2b18';
+import {CLASSES_API_URL} from './portal-config-v18.js';
+import {CLASS_ACCESS_KEY,createClassesClient,createBridgeTransport} from './classes-api-v18.js';
+import {createSchedulesClient} from './schedules-api-v18.js';
+import {showSchedules,legacyScheduleDrafts} from './schedules-view-v18.js';
+import {showClasses} from './classes-view-v18.js';
+import {TEACHER_KEY,route,legacyExamRoute,authenticate,isTeacher,createRepository,activeClasses} from './portal-model-v18.js';
 const app=document.querySelector('#portal'),repository=createRepository(localStorage);
 const node=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
 const link=(label,href)=>{const a=node('a',label);a.href=href;return a;};

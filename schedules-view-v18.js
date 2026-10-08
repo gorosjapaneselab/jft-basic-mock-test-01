@@ -1,5 +1,5 @@
-import {CLASS_ACCESS_KEY} from './classes-api.js?phase=2b18';
-import {newScheduleDraft,editScheduleDraft,alignClosingDate,scheduleWindow} from './schedules-time.js?phase=2b18';
+import {CLASS_ACCESS_KEY} from './classes-api-v18.js';
+import {newScheduleDraft,editScheduleDraft,alignClosingDate,scheduleWindow} from './schedules-time-v18.js';
 const node=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
 const button=(text,fn)=>{const b=node('button',text);b.type='button';b.onclick=fn;return b;};
 export function legacyScheduleDrafts(data,identity){
