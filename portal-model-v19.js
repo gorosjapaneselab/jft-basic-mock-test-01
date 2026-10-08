@@ -1,4 +1,4 @@
-import {DEMO_LOGIN,QUESTION_SETS} from './portal-config.js?phase=2b19';
+import {DEMO_LOGIN,QUESTION_SETS} from './portal-config-v19.js';
 export const TEACHER_KEY='jft-basic:portal:teacher:v1';
 export const DATA_KEY='jft-basic:portal:data:v1';
 export function route(hash){return ['#login','#dashboard','#classes','#schedule','#results'].includes(hash)?hash:'#home';}

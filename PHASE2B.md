@@ -1,8 +1,8 @@
-# Phase 2B — Shared Schedule Management — UI v18
+# Phase 2B — Shared Schedule Management — Diagnostics v19
 
-Build: schedules-phase2b-v18.
+Build: schedules-phase2b-v19.
 
-UI v18 uses the unchanged v17 GAS backend. Already configured v17 installations need no GAS update or reinitialization. New schedules default to Asia/Manila. Existing schedule time zones and unedited timestamp precision are preserved. Native date/time inputs use minutes; Same day as opening controls only the editor.
+Diagnostics v19 uses the unchanged v17 GAS backend. Already configured v17 installations need no GAS update or reinitialization. New schedules default to Asia/Manila. Existing schedule time zones and unedited timestamp precision are preserved. Native date/time inputs use minutes; Same day as opening controls only the editor.
 
 Classes and schedule plans share the existing authenticated GAS HTMLService bridge.
 Add Schedules.gs to the existing Apps Script project, replace ClassesBridge.html with the Phase 2B version, run initializeSchedules once, then update the existing deployment to a new version. Keep the same /exec URL, execute-as and access settings. Do not replace Code.gs or Classes.gs; do not change Results or Classes headers, data or Script Properties.
@@ -18,3 +18,7 @@ Existing local drafts stay in jft-basic:portal:data:v1. Import drafts individual
 Unconfirmed operations stay in jft-basic:schedules-pending:v1:<schoolId>:<teacherId> without credentials. Reloading or reconnecting offers Retry saving with the exact operation and Schedule ID. Only a matching server-confirmed response produces a saved message. A rejected request can be discarded locally only when the server confirms it made no new write. No existing Sheets row is deleted.
 
 The fixed teacher login is for development. Server-side access uses the existing private school key and scope validation. It is not production multi-school authentication.
+
+V19 preserves the V18 editor and adds safe Schedules response diagnostics. SCHEDULE_ROUTE means a Classes response was received; SCHEDULE_SHAPE means schedules is not an array; SCHEDULE_SCOPE means scope mismatch; SCHEDULE_RECORD identifies rejected fields and item position; SCHEDULE_DUPLICATE identifies duplicate IDs. No credentials or raw response values are displayed or logged. No malformed response is accepted, and no local draft or pending mutation is deleted.
+
+The actual Sheets row was read-only inspected and matches the maintained V17/V18 GAS response contract. The deployed authenticated RPC response was not captured; the reported connection failure is not yet confirmed resolved. No GAS update is included or required for this diagnostic release.
