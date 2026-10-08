@@ -1,4 +1,4 @@
-import {CLASS_ACCESS_KEY} from './classes-api.js?phase=2a16';
+import {CLASS_ACCESS_KEY} from './classes-api-v16.js';
 const element=(tag,text)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;return node;};
 const button=(text,click)=>{const node=element('button',text);node.type='button';node.onclick=click;return node;};
 export function showClasses({container,identity,client,legacyClasses,accessStorage}){
